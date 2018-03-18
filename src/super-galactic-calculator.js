@@ -1,6 +1,9 @@
 export function Age(userAge) {
   this.userAge = userAge;
 }
+export function Birthdate(userBirthdate) {
+  this.userBirthdate = userBirthdate;
+}
 Age.prototype.intoDays = function() {
   let age = this.userAge;
   const days = 365;
@@ -112,4 +115,18 @@ Age.prototype.yearsLeftNonSmoker = function() {
       return results;
     }
 
+};
+Birthdate.prototype.dateDifference = function() {
+  let dateOfBirth = this.userBirthdate;
+  const milliseconds = 1000;
+  let birth = new Date(dateOfBirth);
+  let currentTime = new Date("03/16/2018");
+  let birthSeconds = birth.getTime()/milliseconds;
+  let currentSeconds = currentTime.getTime()/milliseconds;
+  let difference = currentSeconds - birthSeconds;
+  if (isNaN(difference)) {
+    return "unable to compute";
+  } else {
+    return difference;
+  }
 };
