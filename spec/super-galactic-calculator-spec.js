@@ -18,4 +18,8 @@ describe('Age', function() {
     let earthYears = new Age(10);
     expect(earthYears.intoMars()).toEqual(5.319148936170213);
   });
+  it('should convert earth to jupiter', function(){
+    let earthYears = new Age(20);
+    expect(earthYears.intoJupiter()).toEqual(1.6863406408094437);
+  });
 });

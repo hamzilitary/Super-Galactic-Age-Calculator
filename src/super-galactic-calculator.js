@@ -37,3 +37,13 @@ Age.prototype.intoMars = function() {
   }
   return result;
 };
+Age.prototype.intoJupiter = function() {
+  let age = this.userAge;
+  const jupiter = 11.86;
+  let result = (age / jupiter);
+  if(isNaN(result)) {
+    return "can't calculate";
+  }
+  return result;
+
+};
