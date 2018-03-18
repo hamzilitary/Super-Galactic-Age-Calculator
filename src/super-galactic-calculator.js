@@ -27,5 +27,13 @@ Age.prototype.intoVenus = function() {
     return "can't calculate";
   }
   return result;
-
+};
+Age.prototype.intoMars = function() {
+  let age = this.userAge;
+  const mars = 1.88;
+  let result = (age / mars);
+  if(isNaN(result)) {
+    return "can't calculate";
+  }
+  return result;
 };

@@ -14,4 +14,8 @@ describe('Age', function() {
     let earthYears = new Age(10);
     expect(earthYears.intoVenus()).toEqual(16.129032258064516);
   });
+  it('should convert earth to mars', function(){
+    let earthYears = new Age(10);
+    expect(earthYears.intoMars()).toEqual(5.319148936170213);
+  });
 });
