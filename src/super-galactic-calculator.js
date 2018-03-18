@@ -19,3 +19,13 @@ Age.prototype.intoMercury = function() {
   }
   return result;
 };
+Age.prototype.intoVenus = function() {
+  let age = this.userAge;
+  const venus = 0.62;
+  let result = (age / venus);
+  if(isNaN(result)) {
+    return "can't calculate";
+  }
+  return result;
+
+};

@@ -12,6 +12,6 @@ describe('Age', function() {
   });
   it('should convert earth to venus', function (){
     let earthYears = new Age(10);
-    expec
-  })
+    expect(earthYears.intoVenus()).toEqual(16.129032258064516);
+  });
 });
