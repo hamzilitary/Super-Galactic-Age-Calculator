@@ -45,5 +45,71 @@ Age.prototype.intoJupiter = function() {
     return "can't calculate";
   }
   return result;
+};
+Age.prototype.yearsLeftSmoker = function() {
+  let age = this.userAge;
+  const smoker = 76;
+  const mercury = 0.24;
+  const venus = 0.62;
+  const mars = 1.88;
+  const jupiter = 11.86;
+  let results = [];
+  if (age > smoker) {
+    let lifeLeft = age - smoker;
+    let mercuryLeft = (lifeLeft / mercury);
+    results.push(mercuryLeft);
+    let venusLeft = (lifeLeft / venus);
+    results.push(venusLeft);
+    let marsLeft = (lifeLeft / mars);
+    results.push(marsLeft);
+    let jupiterLeft = (lifeLeft / jupiter);
+    results.push(jupiterLeft);
+    return results;
+  } else {
+    let lifeLeft = smoker - age;
+    let mercuryLeft = (lifeLeft / mercury);
+    results.push(mercuryLeft);
+    let venusLeft = (lifeLeft / venus);
+    results.push(venusLeft);
+    let marsLeft = (lifeLeft / mars);
+    results.push(marsLeft);
+    let jupiterLeft = (lifeLeft / jupiter);
+    results.push(jupiterLeft);
+    return results;
+  }
+
+
+};
+Age.prototype.yearsLeftNonSmoker = function() {
+  let age = this.userAge;
+  const nonSmoker = 81;
+  const mercury = 0.24;
+  const venus = 0.62;
+  const mars = 1.88;
+  const jupiter = 11.86;
+  let results = [];
+  if (age > nonSmoker) {
+      let lifeLeft = age - nonSmoker;
+      let mercuryLeft = (lifeLeft / mercury);
+      results.push(mercuryLeft);
+      let venusLeft = (lifeLeft / venus);
+      results.push(venusLeft);
+      let marsLeft = (lifeLeft / mars);
+      results.push(marsLeft);
+      let jupiterLeft = (lifeLeft / jupiter);
+      results.push(jupiterLeft);
+      return results;
+    } else {
+      let lifeLeft = nonSmoker - age;
+      let mercuryLeft = (lifeLeft / mercury);
+      results.push(mercuryLeft);
+      let venusLeft = (lifeLeft / venus);
+      results.push(venusLeft);
+      let marsLeft = (lifeLeft / mars);
+      results.push(marsLeft);
+      let jupiterLeft = (lifeLeft / jupiter);
+      results.push(jupiterLeft);
+      return results;
+    }
 
 };
