@@ -1,10 +1,16 @@
-export function Age(userAge) {
-  this.userAge = userAge;
+export class Age {
+  constructor(userAge, userBirthdate){
+    this.userAge = userAge;
+    this.userBirthdate = userBirthdate;
 }
-export function Birthdate(userBirthdate) {
-  this.userBirthdate = userBirthdate;
-}
-Age.prototype.intoDays = function() {
+
+
+
+
+
+
+
+intoDays() {
   let age = this.userAge;
   const days = 365;
   let result = (age * days);
@@ -13,7 +19,7 @@ Age.prototype.intoDays = function() {
   }
   return result;
 };
-Age.prototype.intoMercury = function() {
+intoMercury() {
   let age = this.userAge;
   const mercury = 0.24;
   let result = (age / mercury);
@@ -22,7 +28,7 @@ Age.prototype.intoMercury = function() {
   }
   return result;
 };
-Age.prototype.intoVenus = function() {
+intoVenus() {
   let age = this.userAge;
   const venus = 0.62;
   let result = (age / venus);
@@ -31,7 +37,7 @@ Age.prototype.intoVenus = function() {
   }
   return result;
 };
-Age.prototype.intoMars = function() {
+intoMars() {
   let age = this.userAge;
   const mars = 1.88;
   let result = (age / mars);
@@ -40,7 +46,7 @@ Age.prototype.intoMars = function() {
   }
   return result;
 };
-Age.prototype.intoJupiter = function() {
+intoJupiter() {
   let age = this.userAge;
   const jupiter = 11.86;
   let result = (age / jupiter);
@@ -49,7 +55,7 @@ Age.prototype.intoJupiter = function() {
   }
   return result;
 };
-Age.prototype.yearsLeftSmoker = function() {
+yearsLeftSmoker() {
   let age = this.userAge;
   const smoker = 76;
   const mercury = 0.24;
@@ -83,7 +89,7 @@ Age.prototype.yearsLeftSmoker = function() {
 
 
 };
-Age.prototype.yearsLeftNonSmoker = function() {
+yearsLeftNonSmoker() {
   let age = this.userAge;
   const nonSmoker = 81;
   const mercury = 0.24;
@@ -116,7 +122,7 @@ Age.prototype.yearsLeftNonSmoker = function() {
     }
 
 };
-Birthdate.prototype.dateDifference = function() {
+dateDifference() {
   let dateOfBirth = this.userBirthdate;
   const milliseconds = 1000;
   let birth = new Date(dateOfBirth);
@@ -130,3 +136,4 @@ Birthdate.prototype.dateDifference = function() {
     return difference;
   }
 };
+}
