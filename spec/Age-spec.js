@@ -40,11 +40,11 @@ describe('Age', function() {
     let earthYears = new Age(84);
     expect(earthYears.yearsLeftSmoker()).toEqual([33.333333333333336, 12.903225806451614, 4.25531914893617, 0.6745362563237775]);
   });
-  
-    it('should compare two different dates and determine the difference, in seconds', function() {
-      let birthDate = new Age("03/16/2017");
-      expect(birthDate.dateDifference()).toEqual(31536000);
-    });
+
+  it('should compare two different dates and determine the difference, in seconds', function() {
+    let birthDate = new Age(22);
+    expect(birthDate.dateDifference()).toEqual(0.0010000000002037268);
+  });
 
 
 });

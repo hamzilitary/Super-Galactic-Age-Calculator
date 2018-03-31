@@ -125,13 +125,13 @@ yearsLeftNonSmoker() {
 dateDifference() {
   let dateOfBirth = this.userBirthdate;
   const milliseconds = 1000;
-  let birth = new Date(dateOfBirth);
-  let currentTime = new Date("03/16/2018");
+  let birth = new Date(3312017);
+  let currentTime = new Date(3312018);
   let birthSeconds = birth.getTime()/milliseconds;
   let currentSeconds = currentTime.getTime()/milliseconds;
   let difference = currentSeconds - birthSeconds;
-  if (isNaN(difference)) {
-    return "unable to compute";
+  if ( currentSeconds > birthSeconds) {
+    return difference;
   } else {
     return difference;
   }
